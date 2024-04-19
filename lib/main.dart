@@ -1,8 +1,11 @@
 import 'package:bloc_239/bloc/count_bloc.dart';
 import 'package:bloc_239/bloc/count_event.dart';
 import 'package:bloc_239/bloc/count_state.dart';
+import 'package:bloc_239/list_map_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+
+import 'list_bloc/list_bloc.dart';
 
 void main() {
   runApp(const MyApp());
@@ -36,9 +39,9 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       home: BlocProvider(
-        create: (context) => CountBloc(),
-        child: MyHomePage(),
-      ),
+        create: (context) => ListBloc(),
+        child: ListMapPage(),
+      )
     );
   }
 }
